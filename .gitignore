@@ -1,0 +1,2 @@
+#Ignoramos el trabajo de venv (maquina virtual)
+venv/

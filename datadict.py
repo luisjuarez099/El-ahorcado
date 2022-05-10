@@ -1,6 +1,6 @@
 def read():
     letter=[]
-    with open("/home/juarez2112/juego/DATA.txt","r",encoding="utf-8") as f:
+    with open("/home/juarez2112/juego/data.txt","r",encoding="utf-8") as f:
         for line in f:
             letter.append(line)
     print(letter)

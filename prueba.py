@@ -1,12 +1,18 @@
 import random
-data=["nariz","nube","animal","carro","pez","arma","luna","tren","brazo","perro", "gato"]
+data=["nariz","nube","animal","carro","pez","arma","luna","tren","brazo","perro", "gato","chcolate","navidad","elefante","dentista"]
 word=random.choice(data)
-print(word.upper().strip())
 
-for letter in word:
-    #print(letra, end=" ")
-    hide_word=["_"]*len(letter)
-    print(hide_word,end=" ".strip().upper())
+def run():
+    phrase_random=[letra for letra in word.upper().strip()]
+    print(phrase_random)
+
+    
+
+
+
+if __name__=='__main__':
+    run()
+    
 
     
 

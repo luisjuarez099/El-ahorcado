@@ -24,18 +24,15 @@ def run():
     letra_ancho=[letra for letra in random_word]#crea una lista de la palbra
     random_hide=["*"] * len(letra_ancho)#usa len para el largo de la palabra.
     print(random_hide)
-    i=0
-    while TRUE: 
-        digita_palabra=input("Digita una palabra: ")
-        digita_palabra=digita_palabra.upper().strip()
-        assert digita_palabra.isalpha(), "No se admiten Numeros"
-        if digita_palabra == random_word:
-            print('si es la palabra')
-            break
-        else: 
-            print(f"No es la palabra.")
-        
-        
+    digita_palabra=input("Digita una palabra: ")
+    digita_palabra=digita_palabra.upper().strip()
+    assert digita_palabra.isalpha(), "No se admiten Numeros"
+    if digita_palabra == random_word:
+        print('si es la palabra')
+    else: 
+        print(f"No es la palabra.")
+    
+    print("Hola")    
     
 if __name__=="__main__":
     run()

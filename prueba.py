@@ -23,14 +23,15 @@ def run():
     #     print(ord(j),end=" ")
     print(frase)
 
+    
     #Para comparar podremos usar codigo ASCII????
     # print(phrase_random)
     # print(frase)
-    if set(phrase_random)==set(frase):
-        print("Son iguales")
-    else:
-        print("No son iguales")
-        print(f"La palabra era: {phrase_random}")
+    # if set(phrase_random)==set(frase):
+    #     print("Son iguales")
+    # else:
+    #     print("No son iguales")
+    #     print(f"La palabra era: {phrase_random}")
     
    
 if __name__=='__main__':

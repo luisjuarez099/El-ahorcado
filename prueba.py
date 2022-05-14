@@ -1,38 +1,22 @@
 import random
-def run():
-    data=["nariz","nube","animal","carro","pez","arma","luna","tren","brazo","perro", "gato"]
-    word=random.choice(data)
-    phrase_random=[]#Palabra random almacenada como una lista. para comparar. 
-    for x in word:
-        phrase_random.append(x.upper().strip())
-    #print(phrase_random)
 
-    #--------------------Me oculta la palabra que debo de adivinar.
-    for letter in word:
-        #print(ord(letter.upper()),end="->")
-        for i in letter:
-            i=i.upper()
-            print(["__"],end=" ".upper().strip())
-    #Imprime el largo de la palabra que debo de digitar sus letras.
-    print(" ")    
+DATA=["perro","pavo","iguana","navidad","regalos","piernas","playa","tiburon","serpiente","ojo","salamandra","cocodrilo","amistad","padres","perico","analisis","ropa","gucci","adidas","lululemon","aeropostal"]
 
-    frase=[]#Se almacena la palabra que vamos a introducir.
-    for i in word:
-        frase.append(input("Introduce una palabra: ").upper().strip())
-    # for j in frase:#Imprime cada palabra su codigo ascii
-    #     print(ord(j),end=" ")
-    print(frase)
+random_palabra=random.choice(DATA)
+lista_random_palabra=[letra for letra in random_palabra]#se gurda en la lista la palabra una palabra  random. 
 
-    
-    #Para comparar podremos usar codigo ASCII????
-    # print(phrase_random)
-    # print(frase)
-    # if set(phrase_random)==set(frase):
-    #     print("Son iguales")
-    # else:
-    #     print("No son iguales")
-    #     print(f"La palabra era: {phrase_random}")
-    
-   
-if __name__=='__main__':
-    run()
+lista_random_palabra=["_"]*len(lista_random_palabra)#Imprime oculto la palabra random.
+lista_letras_anadidas=[]#se gurda palabras que el usuario va almacenando
+
+while True:
+    recolector_letra=""
+    print(f"Palabra para adivinar: {lista_random_palabra}")
+    digitar_letras=input("Digita una letra: ")
+    lista_letras_anadidas.append(digitar_letras)
+    for letter in lista_random_palabra:
+        if letter in lista_letras_anadidas:
+            print("Si es la palabra")
+            recolector_letra+=letter
+
+
+
